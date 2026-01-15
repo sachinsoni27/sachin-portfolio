@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiReact, SiStripe, SiNodedotjs, SiMongodb } from 'react-icons/si';
 import musicVibeImg from '../assets/project MUSIC VIBE.png';
+import portfolioImg from '../assets/portfolio project.png';
 
 const projects = [
   {
@@ -40,9 +41,9 @@ const projects = [
     title: "Portfolio",
     desc: "A professional portfolio website showcasing projects, skills, certifications, and achievements with a modern design and interactive features.",
     icons: [<SiReact />],
-    image: "https://via.placeholder.com/600x300",
-    demo: "#",
-    repo: "#"
+    image: portfolioImg,
+    demo: "https://sachin-portfolio-zeta-drab.vercel.app/",
+    repo: "https://github.com/sachinsoni27/sachin-portfolio"
   }
 ];
 
