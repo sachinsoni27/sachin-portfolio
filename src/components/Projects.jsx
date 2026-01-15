@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiReact, SiStripe, SiNodedotjs, SiMongodb } from 'react-icons/si';
 import musicVibeImg from '../assets/project MUSIC VIBE.png';
-import portfolioImg from '../assets/portfolio project.png';
+import portfolioImg from '../assets/Portfolio.png';
 
 const projects = [
   {
