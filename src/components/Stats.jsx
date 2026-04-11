@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { GitHubCalendar } from 'react-github-calendar';
 import softwareEng from '../assets/Software engineering.jpg';
 import softwareEngPdf from '../assets/Software engineering certificate.pdf';
 import linuxCert from '../assets/linux certificate.jpg';
@@ -20,13 +21,13 @@ import awsCertImg from '../assets/AWS Certified Cloud Practitioner certificate.j
 
 const Stats = () => {
   return (
-    <section id="achievements" className="py-20 px-6 md:px-20 max-w-6xl mx-auto border-t border-white/5 relative z-10">
+    <section id="achievements" className="py-20 px-6 md:px-20 max-w-6xl mx-auto relative z-10">
       
       {/* Target Section Heading */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center mb-16"
       >
@@ -100,6 +101,38 @@ const Stats = () => {
         </motion.div>
       </div>
 
+      {/* GitHub Contributions */}
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center gap-2 mb-8 text-xl font-semibold text-gray-300 border-b border-white/10 pb-2"
+      >
+        <span className="text-xl">🟩</span> <h3>GitHub Contributions</h3>
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6 }}
+        className="bg-[#0a0a0a]/60 backdrop-blur-sm p-6 rounded-2xl border border-white/5 flex justify-center w-full mb-16 overflow-x-auto"
+      >
+        <div className="min-w-[750px] md:min-w-0">
+          <GitHubCalendar 
+            username="sachinsoni27" 
+            colorScheme="dark" 
+            theme={{
+              dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+            }}
+            blockSize={14}
+            blockMargin={5}
+            fontSize={14}
+          />
+        </div>
+      </motion.div>
+
       {/* Workshops & Industry Exposure */}
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
@@ -164,7 +197,7 @@ const Stats = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             key={index} 
             className="bg-[#0a0a0a]/60 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/40 hover:shadow-[0_10px_30px_rgba(168,85,247,0.15)] transition-all duration-300 group flex flex-col"

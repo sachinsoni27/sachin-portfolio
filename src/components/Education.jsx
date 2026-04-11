@@ -11,7 +11,7 @@ const Education = () => {
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center mb-16"
       >
@@ -28,7 +28,7 @@ const Education = () => {
       <motion.div 
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className="bg-[#0a0a0a]/60 backdrop-blur-sm border border-white/5 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-500/40 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)] transition-all duration-300 mb-6 group"
       >
@@ -48,7 +48,7 @@ const Education = () => {
       <motion.div 
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="bg-[#0a0a0a]/60 backdrop-blur-sm border border-white/5 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-500/40 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)] transition-all duration-300 mb-6 group"
       >
@@ -68,7 +68,7 @@ const Education = () => {
       <motion.div 
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
         className="bg-[#0a0a0a]/60 backdrop-blur-sm border border-white/5 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-500/40 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)] transition-all duration-300 mb-6 group"
       >
@@ -86,7 +86,7 @@ const Education = () => {
       <motion.div 
         initial={{ opacity: 0, x: -30 }}
         whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.4 }}
         className="bg-[#0a0a0a]/60 backdrop-blur-sm border border-white/5 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6 hover:border-blue-500/40 hover:shadow-[0_10px_30px_rgba(59,130,246,0.1)] transition-all duration-300 group"
       >

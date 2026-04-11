@@ -42,7 +42,7 @@ const Projects = () => {
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center mb-16"
       >
@@ -60,7 +60,7 @@ const Projects = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             key={index} 
             className="bg-[#0a0a0a]/60 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-cyan-500/40 hover:shadow-[0_10px_40px_rgba(34,211,238,0.15)] transition-all duration-300 group flex flex-col"

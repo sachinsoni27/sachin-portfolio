@@ -1,15 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Education from './components/Education';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
 import Stats from './components/Stats';
-import { motion } from 'framer-motion';
+import ScrollToTop from './components/ScrollToTop';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
-
   return (
-    <div className="relative bg-[#030305] min-h-screen text-gray-200 selection:bg-purple-500/40 selection:text-white font-sans overflow-hidden">
+    <div className="relative bg-[#030305] min-h-screen text-gray-200 selection:bg-purple-500/40 selection:text-white font-sans overflow-x-hidden">
       
       {/* Dynamic Background Elements */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -18,14 +19,18 @@ function App() {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 font-sans">
+      <div className="relative z-10 font-sans flex flex-col min-h-screen">
         <Navbar />
-        <main>
-          <Hero />
-          <Education />
-          <TechStack />
-          <Projects />
-          <Stats />
+        <ScrollToTop />
+        
+        <main className="flex-grow pt-20">
+          <Routes>
+            <Route path="/" element={<Hero />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/skills" element={<TechStack />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/stats" element={<Stats />} />
+          </Routes>
         </main>
         
         <footer className="py-12 flex flex-col items-center border-t border-white/5 bg-black/40 backdrop-blur-md">
