@@ -21,7 +21,7 @@ import awsCertImg from '../assets/AWS Certified Cloud Practitioner certificate.j
 
 const Stats = () => {
   return (
-    <section id="achievements" className="py-20 px-6 md:px-20 max-w-6xl mx-auto relative z-10">
+    <section id="achievements" className="min-h-[85vh] flex flex-col justify-center py-12 px-6 md:px-20 max-w-6xl mx-auto relative z-10">
       
       {/* Target Section Heading */}
       <motion.div 

@@ -41,7 +41,7 @@ const skillCategories = [
 
 const TechStack = () => {
   return (
-    <section id="skills" className="py-20 px-6 md:px-20 max-w-6xl mx-auto relative z-10">
+    <section id="skills" className="min-h-[85vh] flex flex-col justify-center py-12 px-6 md:px-20 max-w-6xl mx-auto relative z-10">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

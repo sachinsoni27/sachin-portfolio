@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Education from './components/Education';
@@ -9,6 +9,8 @@ import ScrollToTop from './components/ScrollToTop';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="relative bg-[#030305] min-h-screen text-gray-200 selection:bg-purple-500/40 selection:text-white font-sans overflow-x-hidden">
       
@@ -23,14 +25,25 @@ function App() {
         <Navbar />
         <ScrollToTop />
         
-        <main className="flex-grow pt-20">
-          <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/skills" element={<TechStack />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/stats" element={<Stats />} />
-          </Routes>
+        <main className="flex-grow pt-20 flex flex-col">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="flex-grow flex flex-col items-center justify-center w-full"
+            >
+              <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Hero />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/skills" element={<TechStack />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/stats" element={<Stats />} />
+              </Routes>
+            </motion.div>
+          </AnimatePresence>
         </main>
         
         <footer className="py-12 flex flex-col items-center border-t border-white/5 bg-black/40 backdrop-blur-md">
