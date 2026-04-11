@@ -3,20 +3,44 @@ import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhoneAlt, FaLinkedin, FaGithub, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
+  // REPLACETHIS: Create a free account at https://formspree.io, 
+  // create a form, and paste your 8-character ID below.
+  const FORMSPREE_ID = "sachinsoniofficial2003@gmail.com"; 
+
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+    setError(null);
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formState)
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormState({ name: '', email: '', message: '' });
+        // Reset success state after 5 seconds
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        const data = await response.json();
+        setError(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setError("Network error. Please check your connection.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-      setFormState({ name: '', email: '', message: '' });
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 1500);
+    }
   };
 
   const contactInfo = [
@@ -85,6 +109,7 @@ const Contact = () => {
                 <label className="text-sm font-medium text-gray-400 ml-1">Your Name</label>
                 <input 
                   type="text" 
+                  name="name"
                   required
                   placeholder="John Doe"
                   value={formState.name}
@@ -96,6 +121,7 @@ const Contact = () => {
                 <label className="text-sm font-medium text-gray-400 ml-1">Email Address</label>
                 <input 
                   type="email" 
+                  name="email"
                   required
                   placeholder="john@example.com"
                   value={formState.email}
@@ -108,6 +134,7 @@ const Contact = () => {
             <div className="space-y-2 mb-8 relative z-10">
               <label className="text-sm font-medium text-gray-400 ml-1">Message</label>
               <textarea 
+                name="message"
                 required
                 rows="5"
                 placeholder="Hi Sachin, I'd like to talk about..."
@@ -116,6 +143,10 @@ const Contact = () => {
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-all resize-none"
               ></textarea>
             </div>
+
+            {error && (
+              <p className="text-red-500 text-sm mb-4 font-medium animate-pulse">{error}</p>
+            )}
 
             <button 
               type="submit" 
