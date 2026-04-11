@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import softwareEng from '../assets/Software engineering.jpg';
 import softwareEngPdf from '../assets/Software engineering certificate.pdf';
@@ -14,124 +15,180 @@ import genaiCert from '../assets/Ethical Considerations for Generative AI by IBM
 import genaiPdf from '../assets/Ethical Considerations for Generative AI by IBM SkillsBuild.PDF';
 import ragCert from '../assets/Introduction to Retrieval Augmented Generation by IBM SkillsBuild.jpg';
 import ragPdf from '../assets/Introduction to Retrieval Augmented Generation by IBM SkillsBuild.PDF';
+import awsCertPdf from '../assets/AWS Certified Cloud Practitioner certificate.pdf';
+import awsCertImg from '../assets/AWS Certified Cloud Practitioner certificate.jpg';
 
 const Stats = () => {
   return (
-    <section className="py-10 px-6 md:px-20 max-w-6xl mx-auto">
+    <section id="achievements" className="py-20 px-6 md:px-20 max-w-6xl mx-auto border-t border-white/5 relative z-10">
       
-      {/* Coding Profiles */}
-      <div className="flex items-center gap-2 mb-6 text-2xl font-bold text-purple-300">
-        <span>&lt;/&gt;</span> <h2>Coding</h2>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-4 mb-16">
-        {/* LeetCode Card */}
-        <div className="bg-[#1a1a1a] p-4 rounded-xl border border-orange-900/50 flex items-center justify-between">
-           <div>
-              <h3 className="text-orange-500 font-bold">LeetCode</h3>
-              <p className="text-2xl font-bold">250+</p>
-              <p className="text-xs text-gray-400">problems solved</p>
-           </div>
-           <a href="https://leetcode.com/u/sachin2711/" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-black text-xs px-3 py-1 rounded-full font-bold hover:bg-orange-600 transition-colors">Visit Profile</a>
+      {/* Target Section Heading */}
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-center mb-16"
+      >
+        <div className="inline-flex items-center justify-center p-3 bg-purple-500/10 rounded-full mb-4">
+          <span className="text-purple-400 text-xl">🏆</span>
         </div>
+        <h2 className="text-4xl font-bold tracking-tight mb-4 text-white">Coding Profiles & Achievements</h2>
+        <p className="text-gray-400 max-w-2xl text-center">
+          Active problem solver and continuous learner holding professional certifications.
+        </p>
+      </motion.div>
+
+      {/* Coding Profiles Table/Cards */}
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center gap-2 mb-6 text-xl font-semibold text-gray-300 border-b border-white/10 pb-2"
+      >
+        <span>&lt;/&gt;</span> <h3>Programming</h3>
+      </motion.div>
+
+      <div className="grid md:grid-cols-3 gap-6 mb-16">
+        {/* LeetCode Card */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, delay: 0 }}
+          className="bg-[#0a0a0a]/60 backdrop-blur-sm p-6 rounded-2xl border border-white/5 flex flex-col hover:border-orange-500/40 hover:shadow-[0_10px_30px_rgb(249,115,22,0.1)] transition-all group"
+        >
+           <h3 className="text-orange-500 font-bold mb-4 drop-shadow-[0_0_8px_rgba(249,115,22,0.5)]">LeetCode</h3>
+           <div className="flex-grow">
+             <p className="text-4xl font-bold text-white mb-1">250+</p>
+             <p className="text-sm text-gray-500 mb-6">problems solved</p>
+           </div>
+           <a href="https://leetcode.com/u/sachin2711/" target="_blank" rel="noopener noreferrer" className="bg-white/5 text-gray-300 text-sm px-4 py-2 rounded-lg font-medium hover:bg-orange-500 hover:text-white hover:shadow-[0_0_15px_rgba(249,115,22,0.6)] transition-all text-center">Visit Profile</a>
+        </motion.div>
 
         {/* GFG Card */}
-        <div className="bg-[#1a1a1a] p-4 rounded-xl border border-green-900/50 flex items-center justify-between">
-           <div>
-              <h3 className="text-green-500 font-bold">GeeksForGeeks</h3>
-              <p className="text-2xl font-bold">300+</p>
-              <p className="text-xs text-gray-400">problems solved</p>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="bg-[#0a0a0a]/60 backdrop-blur-sm p-6 rounded-2xl border border-white/5 flex flex-col hover:border-green-500/40 hover:shadow-[0_10px_30px_rgb(34,197,94,0.1)] transition-all group"
+        >
+           <h3 className="text-green-500 font-bold mb-4 drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]">GeeksForGeeks</h3>
+           <div className="flex-grow">
+             <p className="text-4xl font-bold text-white mb-1">300+</p>
+             <p className="text-sm text-gray-500 mb-6">problems solved</p>
            </div>
-           <a href="https://www.geeksforgeeks.org/profile/sachinsoniof54eh" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-black text-xs px-3 py-1 rounded-full font-bold hover:bg-green-600 transition-colors">Visit Profile</a>
-        </div>
+           <a href="https://www.geeksforgeeks.org/profile/sachinsoniof54eh" target="_blank" rel="noopener noreferrer" className="bg-white/5 text-gray-300 text-sm px-4 py-2 rounded-lg font-medium hover:bg-green-500 hover:text-white hover:shadow-[0_0_15px_rgba(34,197,94,0.6)] transition-all text-center border-transparent">Visit Profile</a>
+        </motion.div>
 
          {/* HackerRank Card */}
-         <div className="bg-[#1a1a1a] p-4 rounded-xl border border-blue-900/50 flex items-center justify-between">
-           <div>
-              <h3 className="text-blue-500 font-bold">HackerRank</h3>
-              <p className="text-2xl font-bold">100+</p>
-              <p className="text-xs text-gray-400">problems solved</p>
+         <motion.div 
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, margin: "-50px" }}
+           transition={{ duration: 0.4, delay: 0.2 }}
+           className="bg-[#0a0a0a]/60 backdrop-blur-sm p-6 rounded-2xl border border-white/5 flex flex-col hover:border-blue-500/40 hover:shadow-[0_10px_30px_rgb(59,130,246,0.1)] transition-all group"
+         >
+           <h3 className="text-blue-500 font-bold mb-4 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">HackerRank</h3>
+           <div className="flex-grow">
+             <p className="text-4xl font-bold text-white mb-1">100+</p>
+             <p className="text-sm text-gray-500 mb-6">problems solved</p>
            </div>
-           <a href="https://www.hackerrank.com/profile/sachinsonioffic1" target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-bold hover:bg-blue-600 transition-colors">Visit Profile</a>
-        </div>
+           <a href="https://www.hackerrank.com/profile/sachinsonioffic1" target="_blank" rel="noopener noreferrer" className="bg-white/5 text-gray-300 text-sm px-4 py-2 rounded-lg font-medium hover:bg-blue-500 hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-all text-center">Visit Profile</a>
+        </motion.div>
       </div>
 
-      {/* Achievements */}
-      <div className="flex items-center gap-2 mb-8 text-2xl font-bold text-blue-300">
-        <span className="text-3xl">🏆</span> <h2>Achievements & Certifications</h2>
+      {/* Workshops & Industry Exposure */}
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center gap-2 mb-8 text-xl font-semibold text-gray-300 border-b border-white/10 pb-2"
+      >
+        <span className="text-xl">🏭</span> <h3>Workshops & Industry Exposure</h3>
+      </motion.div>
+
+      <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="bg-[#0a0a0a]/60 backdrop-blur-sm p-6 rounded-2xl border border-white/5 hover:border-cyan-500/40 hover:shadow-[0_10px_30px_rgba(34,211,238,0.1)] transition-all"
+        >
+          <h3 className="text-lg font-bold text-white mb-2">INNOTECH'25 Participant</h3>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Earned Certificate of Achievement for active participation in a national-level technical event.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="bg-[#0a0a0a]/60 backdrop-blur-sm p-6 rounded-2xl border border-white/5 hover:border-cyan-500/40 hover:shadow-[0_10px_30px_rgba(34,211,238,0.1)] transition-all"
+        >
+          <h3 className="text-lg font-bold text-white mb-2">Industrial Visit – CtrlS Datacentre, Noida</h3>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Observed enterprise-scale IT infrastructure, power redundancy systems, network security, and data center operations.
+          </p>
+        </motion.div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="border border-gray-700 rounded-xl overflow-hidden hover:border-purple-500 transition-all group cursor-pointer">
-          <img src={softwareEng} alt="Software Engineering" className="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
-          <div className="p-4 bg-gray-900 flex justify-between items-center">
-            <div>
-              <h3 className="text-white font-bold">Software Engineering</h3>
-              <p className="text-xs text-gray-400">Professional Certification</p>
+      {/* Achievements / Certifications */}
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center gap-2 mb-8 text-xl font-semibold text-gray-300 border-b border-white/10 pb-2"
+      >
+        <span className="text-xl">📜</span> <h3>Certifications</h3>
+      </motion.div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { title: "AWS Cloud Practitioner", desc: "AWS Certified Cloud Practitioner", img: awsCertImg, pdf: awsCertPdf },
+          { title: "Software Engineering", desc: "Professional Certification", img: softwareEng, pdf: softwareEngPdf },
+          { title: "Linux for Beginners", desc: "Operating Systems Certification", img: linuxCert, pdf: linuxPdf },
+          { title: "Web Development", desc: "Complete Web Development Training", img: webDevCert, pdf: webDevPdf },
+          { title: "Java Programming", desc: "Java Programming Fundamentals", img: javaCert, pdf: javaPdf },
+          { title: "PMP Training", desc: "Software Project Management", img: pmpCert, pdf: pmpPdf },
+          { title: "Generative AI", desc: "Ethical Considerations Certification", img: genaiCert, pdf: genaiPdf },
+          { title: "RAG & LLMs", desc: "Retrieval Augmented Generation", img: ragCert, pdf: ragPdf }
+        ].map((cert, index) => (
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            key={index} 
+            className="bg-[#0a0a0a]/60 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-purple-500/40 hover:shadow-[0_10px_30px_rgba(168,85,247,0.15)] transition-all duration-300 group flex flex-col"
+          >
+            <div className="h-48 overflow-hidden relative border-b border-white/5">
+              <img src={cert.img} alt={cert.title} className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
             </div>
-            <a href={softwareEngPdf} download className="text-blue-400 hover:text-blue-300 font-bold text-lg"><FaExternalLinkAlt /></a>
-          </div>
-        </div>
-        <div className="border border-gray-700 rounded-xl overflow-hidden hover:border-purple-500 transition-all group cursor-pointer">
-          <img src={linuxCert} alt="Linux Certificate" className="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
-          <div className="p-4 bg-gray-900 flex justify-between items-center">
-            <div>
-              <h3 className="text-white font-bold">Linux for Beginners</h3>
-              <p className="text-xs text-gray-400">Operating Systems Certification</p>
+            <div className="p-5 flex justify-between items-center sm:min-h-[90px] relative z-10">
+              <div>
+                <h3 className="text-gray-200 font-bold tracking-tight group-hover:text-white transition-colors drop-shadow-[0_0_5px_rgba(255,255,255,0.1)]">{cert.title}</h3>
+                <p className="text-xs text-gray-500 mt-1 line-clamp-1">{cert.desc}</p>
+              </div>
+              <motion.a 
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+                href={cert.pdf} 
+                download 
+                className="text-gray-400 hover:text-purple-400 font-bold p-2 bg-white/5 rounded-full transition-all hover:bg-purple-500/20 hover:shadow-[0_0_10px_rgba(168,85,247,0.4)]" aria-label="Download Certificate"
+              >
+                <FaExternalLinkAlt />
+              </motion.a>
             </div>
-            <a href={linuxPdf} download className="text-blue-400 hover:text-blue-300 font-bold text-lg"><FaExternalLinkAlt /></a>
-          </div>
-        </div>
-        <div className="border border-gray-700 rounded-xl overflow-hidden hover:border-purple-500 transition-all group cursor-pointer">
-          <img src={webDevCert} alt="Web Development" className="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
-          <div className="p-4 bg-gray-900 flex justify-between items-center">
-            <div>
-              <h3 className="text-white font-bold">Web Development</h3>
-              <p className="text-xs text-gray-400">Complete Web Development Training</p>
-            </div>
-            <a href={webDevPdf} download className="text-blue-400 hover:text-blue-300 font-bold text-lg"><FaExternalLinkAlt /></a>
-          </div>
-        </div>
-        <div className="border border-gray-700 rounded-xl overflow-hidden hover:border-purple-500 transition-all group cursor-pointer">
-          <img src={javaCert} alt="Java Programming" className="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
-          <div className="p-4 bg-gray-900 flex justify-between items-center">
-            <div>
-              <h3 className="text-white font-bold">Java Programming</h3>
-              <p className="text-xs text-gray-400">Java Programming Fundamentals</p>
-            </div>
-            <a href={javaPdf} download className="text-blue-400 hover:text-blue-300 font-bold text-lg"><FaExternalLinkAlt /></a>
-          </div>
-        </div>
-        <div className="border border-gray-700 rounded-xl overflow-hidden hover:border-purple-500 transition-all group cursor-pointer">
-          <img src={pmpCert} alt="PMP Training" className="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
-          <div className="p-4 bg-gray-900 flex justify-between items-center">
-            <div>
-              <h3 className="text-white font-bold">PMP Training</h3>
-              <p className="text-xs text-gray-400">Software Project Management</p>
-            </div>
-            <a href={pmpPdf} download className="text-blue-400 hover:text-blue-300 font-bold text-lg"><FaExternalLinkAlt /></a>
-          </div>
-        </div>
-        <div className="border border-gray-700 rounded-xl overflow-hidden hover:border-purple-500 transition-all group cursor-pointer">
-          <img src={genaiCert} alt="Ethical Considerations for Generative AI" className="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
-          <div className="p-4 bg-gray-900 flex justify-between items-center">
-            <div>
-              <h3 className="text-white font-bold">Ethical Considerations for Generative AI</h3>
-              <p className="text-xs text-gray-400">IBM SkillsBuild Certification</p>
-            </div>
-            <a href={genaiPdf} download className="text-blue-400 hover:text-blue-300 font-bold text-lg"><FaExternalLinkAlt /></a>
-          </div>
-        </div>
-        <div className="border border-gray-700 rounded-xl overflow-hidden hover:border-purple-500 transition-all group cursor-pointer">
-          <img src={ragCert} alt="Retrieval Augmented Generation" className="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
-          <div className="p-4 bg-gray-900 flex justify-between items-center">
-            <div>
-              <h3 className="text-white font-bold">Retrieval Augmented Generation</h3>
-              <p className="text-xs text-gray-400">IBM SkillsBuild Certification</p>
-            </div>
-            <a href={ragPdf} download className="text-blue-400 hover:text-blue-300 font-bold text-lg"><FaExternalLinkAlt /></a>
-          </div>
-        </div>
+          </motion.div>
+        ))}
       </div>
 
     </section>
