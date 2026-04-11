@@ -1,8 +1,7 @@
 {
   "name": "sachin-portfolio",
   "private": true,
-  "version": "1.0.0",
-  "author": "Sachin Soni <sachinsoniofficial2003@gmail.com>",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
     { name: 'Achievements', path: '/stats' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   const activeStyle = "text-purple-400 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)] border-b-2 border-purple-500 pb-1 transition-all";

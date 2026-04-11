@@ -5,6 +5,7 @@ import Education from './components/Education';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
 import Stats from './components/Stats';
+import Contact from './components/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/skills" element={<TechStack />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/stats" element={<Stats />} />
+                <Route path="/contact" element={<Contact />} />
               </Routes>
             </motion.div>
           </AnimatePresence>
