@@ -34,7 +34,7 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
-              className="flex-grow flex flex-col items-center justify-center w-full"
+              className="flex-grow w-full flex flex-col"
             >
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Hero />} />

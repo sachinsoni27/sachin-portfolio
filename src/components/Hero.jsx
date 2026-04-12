@@ -25,8 +25,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
-      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto px-6 md:px-20">
+    <section id="about" className="min-h-screen w-full flex items-center justify-center pt-24 pb-12 overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
         {/* Left: Image */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8, rotate: -5 }} 

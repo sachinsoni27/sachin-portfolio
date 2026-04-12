@@ -7,7 +7,8 @@ import buLogo from '../assets/Bundelkhand_University_Logo.png';
 
 const Education = () => {
   return (
-    <section id="education" className="min-h-[85vh] flex flex-col justify-center py-12 px-6 md:px-20 max-w-6xl mx-auto relative z-10">
+    <section id="education" className="min-h-[85vh] w-full flex flex-col items-center justify-center py-20 px-6 md:px-12 lg:px-20 relative z-10">
+      <div className="w-full max-w-6xl mx-auto">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -99,6 +100,7 @@ const Education = () => {
           <p className="text-blue-500 text-sm font-semibold mt-1">Percentage: 87.6%</p>
         </div>
       </motion.div>
+      </div>
     </section>
   );
 };
