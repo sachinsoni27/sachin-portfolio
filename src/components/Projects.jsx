@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiReact, SiStripe, SiNodedotjs, SiMongodb, SiHtml5, SiJavascript } from 'react-icons/si';
-import portfolioImg from '../assets/Portfolio.png';
+import portfolioImg from '../../doc_2026-04-27_20-18-39.png';
 import projectHelperImg from '../assets/project_helper.png';
 import musicVibeImg from '../assets/project MUSIC VIBE.png';
 
