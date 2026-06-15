@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { CiLocationOn } from "react-icons/ci";
-import profilePhoto from '../../Gemini_Generated_Image_u26548u26548u265.png';
+import profilePhoto from '../assets/1781540189495.jpg';
 import resumePdf from '../assets/Sachin_Soni_SDE.pdf';
 
 const Hero = () => {
