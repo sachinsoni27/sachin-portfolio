@@ -1,12 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiReact, SiStripe, SiNodedotjs, SiMongodb, SiHtml5, SiJavascript } from 'react-icons/si';
+import { SiReact, SiStripe, SiNodedotjs, SiMongodb, SiHtml5, SiJavascript, SiTailwindcss, SiFirebase, SiVite, SiHuggingface } from 'react-icons/si';
 import portfolioImg from '../../doc_2026-04-27_20-18-39.png';
 import projectHelperImg from '../assets/project_helper.png';
 import musicVibeImg from '../assets/project MUSIC VIBE.png';
+import quickbillsImg from '../assets/quickbills-generator.png';
+import plantDiseaseImg from '../assets/PlantDiseaseDetectorPublic.png';
 
 const projects = [
+  {
+    title: "Plant Disease Detector",
+    desc: "An AI-powered agricultural web application utilizing Google Gemini and Hugging Face models to detect crop leaf diseases, generate detailed PDF reports, and provide intelligent chatbot support.",
+    icons: [<SiReact />, <SiVite />, <SiTailwindcss />, <SiFirebase />, <SiHuggingface />],
+    image: plantDiseaseImg,
+    demo: "https://plant-disease-detector-ruby.vercel.app/",
+    repo: "https://github.com/sachinsoni27/Plant-Disease-Detector",
+    isPlaceholder: false
+  },
+  {
+    title: "QuickBills - Invoice Generator",
+    desc: "An efficient and user-friendly invoice billing application enabling businesses to input details, auto-calculate taxes/discounts, and print professional invoices directly.",
+    icons: [<SiReact />, <SiTailwindcss />, <SiHtml5 />, <SiJavascript />],
+    image: quickbillsImg,
+    demo: "https://quickbills-generator.vercel.app/",
+    repo: "https://github.com/sachinsoni27/quickbills-generator",
+    isPlaceholder: false
+  },
   {
     title: "Project Helper - AI Code Analyzer",
     desc: "Built an AI-based system to analyze and explain codebases. Provided line-by-line code explanation and chatbot support. Implemented bug detection and interview question generation.",

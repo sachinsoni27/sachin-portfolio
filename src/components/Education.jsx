@@ -41,7 +41,7 @@ const Education = () => {
         <div className="text-center md:text-left">
           <h3 className="text-xl font-bold group-hover:text-white transition-colors">KIET Group of Institutions, Ghaziabad</h3>
           <p className="text-gray-400 mt-1">Master of Computer Applications (MCA) · (August 2025 - Present)</p>
-          <p className="text-blue-500 text-sm font-semibold mt-1">CGPA: 8.02</p>
+          <p className="text-blue-500 text-sm font-semibold mt-1">CGPA: 8.08</p>
         </div>
       </motion.div>
 
