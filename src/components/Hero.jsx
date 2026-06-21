@@ -43,7 +43,7 @@ const Hero = () => {
               transition={{ duration: 0.4 }}
               src={profilePhoto} 
               alt="Sachin Soni" 
-              className="relative rounded-full w-full h-full object-cover border-[6px] border-[#0a0a0a] shadow-[0_0_40px_rgba(168,85,247,0.3)] z-10"
+              className="relative rounded-full w-full h-full object-cover object-top border-[6px] border-[#0a0a0a] shadow-[0_0_40px_rgba(168,85,247,0.3)] z-10"
             />
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
